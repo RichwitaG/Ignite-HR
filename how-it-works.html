@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ignite HR - Transform Your Workplace Culture</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.7;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 60px 50px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        h1 {
+            font-size: 3em;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        
+        .tagline {
+            font-size: 1.4em;
+            color: #546e7a;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+        
+        .hero-text {
+            font-size: 1.2em;
+            color: #37474f;
+            margin-bottom: 50px;
+            line-height: 1.8;
+        }
+        
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+        
+        .service-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 30px;
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .service-card h3 {
+            color: #5e35b1;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+        
+        .service-card p {
+            color: #546e7a;
+            line-height: 1.6;
+        }
+        
+        .how-it-works {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 40px;
+            margin: 50px 0;
+        }
+        
+        .how-it-works h2 {
+            color: #5e35b1;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+        
+        .step-number {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        
+        .step-content h4 {
+            color: #37474f;
+            margin-bottom: 8px;
+        }
+        
+        .step-content p {
+            color: #607d8b;
+        }
+        
+        .cta-section {
+            text-align: center;
+            margin: 60px 0;
+            padding: 50px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            border-radius: 20px;
+        }
+        
+        .cta-section h2 {
+            color: white;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            color: rgba(255,255,255,0.95);
+            font-size: 1.3em;
+            margin-bottom: 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 18px 40px;
+            background: white;
+            color: #f5576c;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin: 10px;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-secondary:hover {
+            background: white;
+            color: #f5576c;
+        }
+        
+        .footnote {
+            margin-top: 80px;
+            padding-top: 30px;
+            border-top: 1px solid #e0e0e0;
+            color: #90a4ae;
+            font-size: 0.9em;
+            text-align: center;
+        }
+        
+        .footnote strong {
+            color: #607d8b;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            
+            .card {
+                padding: 40px 25px;
+            }
+            
+            .tagline {
+                font-size: 1.2em;
+            }
+            
+            .hero-text {
+                font-size: 1.1em;
+            }
+            
+            .cta-section h2 {
+                font-size: 1.8em;
+            }
+            
+            .btn {
+                display: block;
+                width: 100%;
+                max-width: 300px;
+                margin: 10px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Ignite HR</h1>
+            <p class="tagline">Your People Problems, Solved.</p>
+            
+            <div class="hero-text">
+                <p>Think of us as your workplace therapist meets business strategist. We fix the human side of work — the messy, complicated, absolutely critical stuff that keeps leaders up at night.</p>
+                <p><strong>No corporate jargon. No six-month implementations. Just real solutions that actually work.</strong></p>
+            </div>
+            
+            <div class="services">
+                <div class="service-card">
+                    <h3>🔥 Culture Transformation</h3>
+                    <p>When your workplace feels broken, we fix it. From toxic cultures needing emergency intervention to good teams wanting to be great. We measure what matters and make the invisible visible.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>🧭 Career Compass</h3>
+                    <p>Your employees are stressed, stuck, or headed for the exit. Our 24-month program turns promising talent into confident leaders. Think executive coaching meets wellness program — but actually effective.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>🤝 EAP Enhancement</h3>
+                    <p>Your current Employee Assistance Program gets 3-6% usage. Ours gets 40-70%. We don't replace your EAP — we supercharge it with tech that works and support people actually use.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>🚀 Talent Strategy Sprints</h3>
+                    <p>Stop the revolving door. In one intensive session, we diagnose why people leave, where hiring breaks down, and exactly what to fix first. Real data, real solutions, real fast.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>💡 Leadership Development</h3>
+                    <p>Your managers got promoted for being good at their jobs, not managing people. We teach them the human skills nobody else does — in ways that stick.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>🏠 HavenAtlas</h3>
+                    <p>Housing stress kills productivity. Our relocation and housing support helps employees find homes, navigate moves, and actually settle in. Because stable housing means stable teams.</p>
+                </div>
+            </div>
+            
+            <div class="how-it-works">
+                <h2>How We're Different</h2>
+                
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>We measure everything</h4>
+                        <p>Our Culture OS™ platform tracks the stuff that matters — psychological safety, trust networks, actual vs. stated values. Weekly pulse checks that people actually complete.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>We guarantee happiness (seriously)</h4>
+                        <p>One-hour strategy session. If you don't walk away with at least three actionable insights, it's free. We're that confident.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>We work with what you have</h4>
+                        <p>No rip-and-replace. We enhance your existing systems, integrate with your current tools, and make your EAP actually work. Think evolution, not revolution.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>We solve root causes</h4>
+                        <p>Ping pong tables don't fix toxic culture. We address the real issues — from housing stress to career anxiety to broken trust. The whole human, not just the employee.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cta-section">
+                <h2>Ready to Fix Your People Problems?</h2>
+                <p>Start with our free Culture Drift Detector™ or book your guaranteed strategy session.</p>
+                <a href="#contact" class="btn">Get Started</a>
+                <a href="#info" class="btn btn-secondary">Learn More</a>
+            </div>
+            
+            <div class="footnote">
+                <p><strong>Additional Support Available:</strong> We also provide guidance on HR compliance and technology selection through our partner network. While we don't implement these systems directly, we'll connect you with trusted experts who can. Ask us about referrals for HRIS platforms, compliance audits, and specialized HR tech during your consultation.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
